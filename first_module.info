@@ -1,0 +1,4 @@
+name = First Module
+description = My first module
+core = 7.x
+files[] = first_module.module
