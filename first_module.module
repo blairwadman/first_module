@@ -21,10 +21,10 @@ function first_module_help($path, $arg) {
  */
 function first_module_menu() { 
   // This is the minimum information you can provide for a menu item.
-  $items['first_module'] = array(
-    'title' => 'TODO: Enter menu item title',
-    'page callback' => 'TODO: Enter callback function',
-    'access arguments' => array('TODO: Enter user permissions'),
+  $items['first_module/custom'] = array(
+    'title' => 'Custom page',
+    'page callback' => 'first_module_custom',
+    'access arguments' => array('access content'),
   );
   // more complex menu item
   $items['first_module/foo'] = array(
