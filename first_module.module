@@ -49,7 +49,12 @@ function first_module_menu() {
  * Custom callback function
  */
 function first_module_custom() {
-  return '<p>Hello world</p>';
+  $content['raw_markup'] = array(
+  '#type' => 'markup',
+  '#markup' => '<p>Hello world</p>',
+  );
+        
+  return $content;
 }
 
 /**
