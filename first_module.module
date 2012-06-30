@@ -46,6 +46,13 @@ function first_module_menu() {
 }
 
 /**
+ * Custom callback function
+ */
+function first_module_custom() {
+  return '<p>Hello world</p>';
+}
+
+/**
  * Implements hook_form_alter().
  */
 function first_module_form_alter(&$form, &$form_state, $form_id) {
