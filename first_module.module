@@ -49,11 +49,13 @@ function first_module_menu() {
  * Custom callback function
  */
 function first_module_custom() {
-  $content['raw_markup'] = array(
-  '#type' => 'markup',
-  '#markup' => '<p>Hello world</p>',
-  );
-        
+  
+  // Load node 1
+  $node = node_load(1);
+  
+  // View of node 1
+  $content = node_view($node); 
+
   return $content;
 }
 
