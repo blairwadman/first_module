@@ -21,7 +21,7 @@ function first_module_help($path, $arg) {
  */
 function first_module_menu() { 
   // This is the minimum information you can provide for a menu item.
-  $items['first_module/custom/%'] = array(
+  $items['first_module/custom/%node'] = array(
     'title' => 'Custom page',
     'page callback' => 'first_module_custom',
     'page arguments' => array(2),
@@ -49,12 +49,8 @@ function first_module_menu() {
 /**
  * Custom callback function
  */
-function first_module_custom($nid) {
-  
-  // Load node 1
-  $node = node_load($nid);
-  
-  // View of node 1
+function first_module_custom($node) {  
+  // View of node
   $content = node_view($node); 
 
   return $content;
