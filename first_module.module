@@ -74,5 +74,5 @@ function first_module_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_user_login().
  */
 function first_module_user_login(&$edit, $account) {
-  drupal_set_message('Thank you for logging in and welcome!');
+  drupal_set_message(t('Thank you for logging in and welcome!'));
 }
