@@ -60,14 +60,14 @@ function first_module_custom($node) {
  * Implements hook_form_alter().
  */
 function first_module_form_alter(&$form, &$form_state, $form_id) {
-  if (isset($form['type']) && $form['type']['#value'] . '_node_settings' == $form_id) {
-    $form['workflow']['upload_' . $form['type']['#value']] = array(
-      '#type' => 'radios',
-      '#title' => t('Attachments'),
-      '#default_value' => variable_get('upload_' . $form['type']['#value'], 1),
-      '#options' => array(t('Disabled'), t('Enabled')),
+  if ($form_id == 'article_node_form') {
+    $form['field_message'] = array(
+      '#type' => 'item',
+      '#title' => t('New article'),
+      '#markup' => t('You are about to create a new article'),
+      '#weight' => -6,
     );
-  }
+  }  
 }
 
 /**
