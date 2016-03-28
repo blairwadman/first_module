@@ -1,1 +1,19 @@
 <?php
+/**
+ * @file
+ * Module file for first_module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ **/
+function first_module_form_node_article_form_alter(&$form, FormStateInterface $form_state) {
+  $form['field_message'] = array(
+    '#type' => 'item',
+    '#title' => t('New article'),
+    '#markup' => t('You are about to create a new article'),
+    '#weight' => -6,
+  );
+}
