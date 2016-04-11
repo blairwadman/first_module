@@ -17,3 +17,12 @@ function first_module_form_node_article_form_alter(&$form, FormStateInterface $f
     '#weight' => -6,
   );
 }
+
+/**
+ * Implements hook_user_login().
+ *
+ * @param $account
+ */
+function first_module_user_login($account) {
+  drupal_set_message(t('Thank you for logging in and welcome!'));
+}
