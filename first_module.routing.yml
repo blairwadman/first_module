@@ -5,4 +5,4 @@ first_module.content:
     _title: 'Hello world'
     name: 'Bob'
   requirements:
-    _permission: 'access content'
+    _permission: 'custom path'

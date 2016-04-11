@@ -1,0 +1,4 @@
+custom path:
+  title: 'Custom page'
+  description: 'Allow users access to the custom path'
+  restrict access: TRUE
